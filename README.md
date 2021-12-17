@@ -81,15 +81,15 @@ We use the following datasets for our experiments.
 
 - XSum -> https://github.com/EdinburghNLP/XSum
 
-- Webis-TLDR-17 Corpus (Reddit) -> https://zenodo.org/record/1168855#.YbwBxGjMJPY
+- Webis-TLDR-17 Corpus (Reddit) -> https://www.tensorflow.org/datasets/catalog/reddit
 
-- Gigaword
+- Gigaword -> https://www.tensorflow.org/datasets/catalog/gigaword
 
-For acquiring a small subset of dataset, please run 
+For acquiring a small subset of dataset, please run (make sure you have the `.obj` file)
 ```
 python get_data.py
 ```
-For generating candidates, please run
+For generating candidates, please run (make sure you have the `.obj` file and have created the folder of the dataset name)
 ```
 python load_dataset.py --split test --data [path of pkl files] --max_length 50 --min_length 5
 ```
