@@ -73,6 +73,8 @@ Following directories should be created for our experiments.
 
 -  `./result` -> storing evaluation results
 
+-  `./output` -> storing outputs of the model and the references
+
   
 
 ##  2. Preprocessing
@@ -89,7 +91,7 @@ We use the following datasets for our experiments.
 
 - Gigaword -> https://www.tensorflow.org/datasets/catalog/gigaword
 
-For acquiring a small subset of dataset, please run (make sure you have the `.obj` file)
+For acquiring a small subset of dataset, please run:
 ```
 python get_data.py
 ```
