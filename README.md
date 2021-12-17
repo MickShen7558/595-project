@@ -45,9 +45,13 @@ As shown below, SimCLS framework consists of for two stages: Candidate Generatio
 
 ###  Description of Codes
 
--  `main.py`, `main_SimCSE.py` -> training and evaluation procedure
+-  `main.py` -> training and evaluation procedure of original SimCLS
 
--  `model.py`, `model_SimCSE.py` -> models
+-  `main_SimCSE.py`training and evaluation procedure of our works
+
+-  `model.py` -> models of original SimCLS
+
+-  `model_SimCSE.py` -> models of our works
 
 -  `data_utils.py` -> dataloader
 
@@ -139,13 +143,13 @@ You can download the preprocessed data for our experiments on [CNNDM](https://dr
 
   
 
-After donwloading, you should unzip the zip files in this root directory.
+After donwloading, you should unzip the zip files to `./`.
 
   
 
 ###  Hyper-parameter Setting
 
-You may specify the hyper-parameters in `main.py`.
+You may specify the hyper-parameters in `main.py` and `main_SimCSE.py`.
 
   
 
@@ -155,12 +159,13 @@ To reproduce our results, you could use the original configuration in the file, 
 
   
   
+substitute `main_SimCSE.py` with `main.py` if you want to review SimCLS's works
 
 ###  Train
 
 ```
 
-python main.py --cuda --gpuid [list of gpuid] -l
+python main_SimCSE.py --cuda --gpuid [list of gpuid] -l
 
 ```
 
@@ -168,7 +173,7 @@ python main.py --cuda --gpuid [list of gpuid] -l
 
 ```
 
-python main.py --cuda --gpuid [list of gpuid] -l --model_pt [model path]
+python main_SimCSE.py --cuda --gpuid [list of gpuid] -l --model_pt [model path]
 
 ```
 
@@ -178,11 +183,11 @@ model path should be a subdirectory in the `./cache` directory, e.g. `cnndm/mode
 
 ```
 
-python main.py --cuda --gpuid [single gpu] -e --model_pt [model path]
+python main_SimCSE.py --cuda --gpuid [single gpu] -e --model_pt [model path]
 
 ```
 
-model path should be a subdirectory in the `./cache` directory, e.g. `cnndm/model.pt` (it shouldn't contain the prefix `./cache/`).
+model path should be a subdirectory in the `./cache` directory, e.g. `cnndm/model.pt` (it shouldn't contain the prefix `./cache/`). If you do not specify the model, it would evaluate the untrained version of our model.
 
   
 
