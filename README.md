@@ -1,5 +1,5 @@
 
-#  SimCLS: A Simple Framework for Contrastive Learning of Abstractive Summarization (ACL 2021)
+#  Improving and Evaluating Contrastive Learning in Abstractive Summarization
 
   
   
@@ -47,7 +47,7 @@ As shown below, SimCLS framework consists of for two stages: Candidate Generatio
 
 -  `main.py` -> training and evaluation procedure of original SimCLS
 
--  `main_SimCSE.py`training and evaluation procedure of our works
+-  `main_SimCSE.py` -> training and evaluation procedure of our works
 
 -  `model.py` -> models of original SimCLS
 
